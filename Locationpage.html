@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enfield Developers</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<body style="background-color: black; margin:0;">
+
+    <!-- NAVIGATION -->
+    <ul class="nav">
+          <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Contact_Page.html">Contact</a></li>
+        <li><a href="Our_Developers.html">Our Developers</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="Locationpage.html">Find Us</a></li>
+    </ul>
+
+    <!-- FLEX LAYOUT -->
+    <div class="layout">
+
+        <!-- LEFT PANEL -->
+        <div class="left-panel">
+            <h1>This is how you can find and speak to us in person</h1>
+            <h2>We are located in central Enfield</h2>
+        </div>
+
+        <!-- RIGHT PANEL (MAP) -->
+        <div class="right-panel">
+            <div id="googleMap"></div>
+        </div>
+
+    </div>
+
+    <script>
+        function myMap() {
+            // Random location in Enfield
+            var location = { lat: 51.6521, lng: -0.0799 };
+        
+            var map = new google.maps.Map(document.getElementById("googleMap"), {
+                center: location,
+                zoom: 14
+            });
+        
+            // Add a marker at that location
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "Enfield Location"
+            });
+        }
+        </script>
+        
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCojFBvX17G99bt2RKuXq0_7o3Y2Y9HMFs&callback=myMap"></script>
+
+</body>
+</html>

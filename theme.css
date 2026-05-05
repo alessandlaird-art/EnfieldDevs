@@ -1,0 +1,411 @@
+:root {
+  --black: #070707;
+  --dark: #111;
+  --gold: #d4af37;
+  --gold-dark: #b8860b;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #2b2105, var(--black) 55%);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVIGATION */
+ul,
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 14px 24px;
+  display: flex;
+  gap: 18px;
+  background: linear-gradient(90deg, #111, var(--gold-dark));
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+ul li {
+  float: none;
+}
+
+ul li a,
+.nav a {
+  display: block;
+  color: var(--white);
+  font-size: 22px;
+  padding: 12px 18px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+ul li a:hover,
+.nav a:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+/* HEADINGS */
+.heading-block {
+  color: var(--gold);
+  text-align: center;
+  font-size: 42px;
+  margin: 70px auto 30px;
+  max-width: 1000px;
+  text-shadow: 0 0 18px rgba(212, 175, 55, 0.5);
+}
+
+h2,
+p {
+  margin: 24px;
+}
+
+/* GOLD CARDS */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.contact-box,
+.service-card,
+.contact-card {
+  flex: 1;
+  padding: 35px;
+  border-radius: 18px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  border: 2px solid #f2d16b;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+  color: white;
+}
+
+.contact-box:hover,
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.65);
+}
+
+.contact-box h2 {
+  color: white;
+  font-size: 26px;
+  margin-bottom: 15px;
+  width: auto;
+}
+
+.contact-box p {
+  font-size: 18px;
+}
+
+/* BUTTONS */
+.special-button,
+.submit-button {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: white;
+  padding: 16px 30px;
+  font-size: 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  border: 2px solid #f2d16b;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  transition: 0.3s ease;
+}
+
+.special-button {
+  width: auto;
+  height: auto;
+  position: static;
+  display: block;
+  margin: 40px auto;
+}
+
+.special-button:hover,
+.submit-button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.75);
+}
+
+/* FORM */
+.form-wrapper {
+  max-width: 600px;
+  margin: 70px auto;
+  padding: 20px;
+}
+
+.form-title {
+  color: var(--gold);
+  font-size: 34px;
+  text-align: center;
+}
+
+.form-subtitle {
+  text-align: center;
+  color: #ddd;
+}
+
+.form-row {
+  margin-bottom: 16px;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gold);
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  background: #151515;
+  color: white;
+  font-size: 16px;
+}
+
+.textarea {
+  height: 130px;
+  resize: none;
+}
+
+.form-error {
+  color: red;
+}
+
+/* DEVELOPER SLIDES */
+
+
+
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.caption,
+.dev-info {
+  color: var(--gold);
+  font-size: 22px;
+  text-align: center;
+}
+
+/* MAP PAGE */
+.layout {
+  display: flex;
+  min-height: calc(100vh - 70px);
+}
+
+.left-panel {
+  width: 35%;
+  background: linear-gradient(180deg, #211900, #080808);
+  padding: 40px;
+}
+
+.left-panel h1,
+.left-panel h2 {
+  color: var(--gold);
+}
+
+.right-panel {
+  flex: 1;
+}
+
+#googleMap {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+}
+
+/* FAQ */
+.faq {
+  max-width: 700px;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+}
+
+.faq-item {
+  border-bottom: 1px solid #333;
+  padding: 12px 0;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-size: 20px;
+  text-align: left;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  color: #ddd;
+}
+
+.faq-answer p {
+  margin: 10px 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  ul,
+  .nav,
+  .contact-container,
+  .layout,
+  .slide {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    width: auto;
+  }
+
+  .heading-block {
+    font-size: 30px;
+    padding: 0 20px;
+  }
+}
+
+.home-page {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 24px;
+  gap: 70px;
+}
+
+.hero-card {
+  width: min(1100px, 92%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 50px;
+  border-radius: 8px;
+
+  /* CLEAN GOLD BLOCK */
+  background: linear-gradient(135deg, #c9a227, #a67c00);
+  border: 1px solid #e5c158;
+
+  color: #111;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.home-logo {
+  width: 320px;
+  max-width: 100%;
+}
+
+/* SERVICES - BLOCK GRID */
+.services-card {
+  width: min(1100px, 92%);
+}
+
+.services-card h2 {
+  color: #d4af37;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.services-card ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.services-card {
+  width: min(1100px, 92%);
+  margin: 40px auto;
+  padding: 40px;
+
+  /* ONE GOLD BLOCK */
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  border: 1px solid #f2d16b;
+  border-radius: 8px;
+
+  color: #111;
+}
+
+.services-card h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* REMOVE GRID */
+.services-card ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step;
+}
+
+.services-card li {
+  counter-increment: step;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+/* NUMBER STYLE */
+.services-card li::before {
+  content: counter(step, decimal-leading-zero) ". ";
+  font-weight: bold;
+}
+
+/* TITLE */
+.services-card strong {
+  font-weight: bold;
+}
+
+.slideshow-container {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.slide {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.slide.active {
+  display: flex;
+}
+
+.slide img {
+  width: 300px;
+  height: auto;
+}
+
+.caption {
+  color: #d4af37;
+  font-size: 24px;
+  text-align: left;
+}
