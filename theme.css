@@ -468,24 +468,29 @@ p {
 
 
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(6px);
-    }
+.scroll-indicator {
+    text-align: center;
+    color: gold;
+    font-size: 28px;
+    font-weight: bold;
+    animation: bounce 1.5s infinite;
 }
 
 .arrow {
     width: 20px;
     height: 20px;
-
     border-left: 4px solid gold;
     border-bottom: 4px solid gold;
-
     transform: rotate(-45deg);
-
     margin: 15px auto;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 6px;
+    }
 }
